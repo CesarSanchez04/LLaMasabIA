@@ -1,0 +1,23 @@
+# ️ Core del backend (API)
+fastapi==0.115.2            # Framework principal del backend
+uvicorn[standard]==0.30.6   # Servidor ASGI para FastAPI
+requests==2.32.3            # Cliente HTTP para comunicarse con Ollama
+pydantic==2.9.2             # Validación de datos (modelos de entrada/salida)
+python-dotenv==1.0.1        # Para manejar variables de entorno (opcional)
+
+#  Lógica y utilidades
+sympy==1.13.3               # Verificación simbólica (derivadas, ecuaciones)
+numpy==1.26.4               # Dependencia base para embeddings y cálculos
+
+#  RAG - Indexación y búsqueda
+chromadb==0.5.3             # Vector store local (persistente)
+pypdf==4.3.1                # Carga y lectura básica de PDFs
+tiktoken==0.7.0             # Tokenizer (si luego cuentas tokens en los prompts)
+
+#  Embeddings locales (offline)
+llama-cpp-python==0.2.90    # Runtime local para modelos GGUF (bge-small)
+# sentence-transformers==3.1.1  # Alternativa (si usas embeddings vía HF)
+
+#  Opcionales / Mantenimiento
+rich==13.8.0                # Mejor logging/prints en consola
+typer==0.12.4               # CLI para ingesta y utilidades (python -m app.rag)
